@@ -1,0 +1,80 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'font9002832c31fecc8695ccdc56328fb0fb';
+        
+    src: url('https://nomail.com.ua/files/eot/9002832c31fecc8695ccdc56328fb0fb.eot?#iefix') format('embedded-opentype'),
+         url('https://nomail.com.ua/files/woff/9002832c31fecc8695ccdc56328fb0fb.woff') format('woff'),
+         url('https://nomail.com.ua/files/woff2/9002832c31fecc8695ccdc56328fb0fb.woff2') format('woff2');
+}
+    
+@font-face { font-family: 'PFBagueSansPro-Thin';  src: local('PFBagueSansPro-Thin'), url('https://nomail.com.ua/files/woff/9002832c31fecc8695ccdc56328fb0fb.woff') format('woff'); }
+
+@font-family-for-all: 'font9002832c31fecc8695ccdc56328fb0fb';
+
+body {
+    width: 100%;
+    background-color: aqua; 
+    #main {
+        display: block;
+        max-width: 1366px;
+        background-color: aquamarine;
+        margin: auto;
+        .header {
+            background: rgb(255, 255, 255);
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .header__logo {
+                margin-left: 20px;
+                .box {
+                    display: flex;
+                    .box-s {
+
+                    }
+                    .box-p {    
+                        font-family: @font-family-for-all;
+                        line-height: normal;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .header__menu {
+                .all {
+                    display: flex;
+                    &-key {
+                        list-style-type: none;
+                        .item {
+                            font-family: @font-family-for-all;
+                            text-decoration: none;
+                        }
+                    }   
+                }
+            }
+            .header__button {
+                margin-right: 20px;
+                .connection {
+                    .send {
+                        font-family: @font-family-for-all;
+                    }
+                }
+
+            }    
+        }
+        .content {
+            &-1 {
+                width: 100%;
+                height: auto;
+                img {
+                    width: 902px;
+                    height: 691px;
+                }
+            }
+        }
+    }
+}
