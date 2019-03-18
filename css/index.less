@@ -26,16 +26,16 @@ body {
         margin: auto;
         .header {
             background: rgb(255, 255, 255);
-            height: 80px;
+            height: 70px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             .header__logo {
                 margin-left: 20px;
+                width: 20%;
                 .box {
                     display: flex;
                     .box-s {
-
                     }
                     .box-p {    
                         font-family: @font-family-for-all;
@@ -45,22 +45,37 @@ body {
                 }
             }
             .header__menu {
+                width: 60%;
                 .all {
                     display: flex;
+                    justify-content: space-between;
+                    width: 100%;
                     &-key {
                         list-style-type: none;
                         .item {
                             font-family: @font-family-for-all;
                             text-decoration: none;
+                            line-height: 18px;
+                            font-size: 13px;
+                            letter-spacing: 0.1em;
+                            text-transform: uppercase;
+                            color: #404040;
                         }
                     }   
                 }
             }
             .header__button {
-                margin-right: 20px;
+                width: 20%;
                 .connection {
                     .send {
                         font-family: @font-family-for-all;
+                        width: 226px;
+                        height: 40px;
+                        background: rgb(80, 50, 50);
+                        font-size: 15px;
+                        color: white;
+                        font-weight: bold;
+                        border: none;
                     }
                 }
 
@@ -70,10 +85,25 @@ body {
             &-1 {
                 width: 100%;
                 height: auto;
+                display: flex;
+                position: relative;
+                z-index: 3;    
                 img {
+                    position: absolute;
+                    z-index: 2;
                     width: 902px;
-                    height: 691px;
+                    height: 691px;  
                 }
+                .ellipse_box {
+                    position: absolute;
+                    z-index: 1;
+                    width: 1367px;
+                    height: 691.33px;
+                    left: -1px;
+                    top: 75.38px;
+                    background: #B18999;
+                    border-radius: 50%;
+                } 
             }
         }
     }
