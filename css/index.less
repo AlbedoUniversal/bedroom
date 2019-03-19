@@ -18,18 +18,23 @@
 
 body {
     width: 100%;
-    background-color: aqua; 
+    background-color: aqua;
     #main {
         display: block;
         max-width: 1366px;
         background-color: aquamarine;
         margin: auto;
+        z-index: 4;
+        overflow: hidden;
+        position: relative;
         .header {
             background: rgb(255, 255, 255);
             height: 70px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            z-index: 3;
             .header__logo {
                 margin-left: 20px;
                 width: 20%;
@@ -87,24 +92,55 @@ body {
                 height: auto;
                 display: flex;
                 position: relative;
-                z-index: 3;    
+                z-index: 1;    
                 img {
-                    position: absolute;
-                    z-index: 2;
+                    z-index: 10;
                     width: 902px;
                     height: 691px;  
-                }
-                .ellipse_box {
-                    position: absolute;
-                    z-index: 1;
-                    width: 1367px;
-                    height: 691.33px;
-                    left: -1px;
-                    top: 75.38px;
-                    background: #B18999;
-                    border-radius: 50%;
                 } 
             }
+            .ellipse_box {
+                z-index: 2;
+                position: absolute;
+                width: 1001px;
+                height: 1036px;
+                left: 54%;
+                top: -83px;
+                background: #B18999;
+                border-radius: 50%;
+                .ellipse_title {
+                    position: absolute;
+                    width: 450px;
+                    height: 88px;
+                    left: 120px;
+                    top: 316px;
+                    font-family: PF Bague Sans Pro;
+                    font-size: 40px;
+                    line-height: 54px;
+                    color: #F2F2F2;
+                }
+                .ellipse_title2 {
+                    position: absolute;
+                    width: 446px;
+                    height: 64px;
+                    left: 122px;
+                    top: 435px;
+
+                    font-family: PF Bague Sans Pro;
+                    font-size: 18px;
+                    line-height: 25px;
+
+                    color: #F2F2F2;
+                }
+            }
+        }
+        .content-2 {
+            width: 100%;
+            height: 467px;
+            z-index: 100;
+            position: relative;
+            display: block;
+            background-color: #ffffff;
         }
     }
 }
