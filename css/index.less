@@ -51,13 +51,13 @@ body {
             }
             .header__menu {
                 width: 60%;
-                .all {
+                &__nav {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: space-around;
                     width: 100%;
                     &-key {
                         list-style-type: none;
-                        .item {
+                        &__item {
                             font-family: @font-family-for-all;
                             text-decoration: none;
                             line-height: 18px;
@@ -71,7 +71,7 @@ body {
             }
             .header__button {
                 width: 20%;
-                .connection {
+                &__connection {
                     .send {
                         font-family: @font-family-for-all;
                         width: 226px;
@@ -87,7 +87,7 @@ body {
             }    
         }
         .content {
-            &-1 {
+            &__background {
                 width: 100%;
                 height: auto;
                 display: flex;
@@ -99,7 +99,7 @@ body {
                     height: 691px;  
                 } 
             }
-            .ellipse_box {
+            &__ellipse {
                 z-index: 2;
                 position: absolute;
                 width: 1001px;
@@ -108,25 +108,25 @@ body {
                 top: -83px;
                 background: #B18999;
                 border-radius: 50%;
-                .ellipse_title {
+                &__title {
                     position: absolute;
                     width: 450px;
                     height: 88px;
                     left: 120px;
                     top: 316px;
-                    font-family: PF Bague Sans Pro;
+                    font-family: @font-family-for-all;
                     font-size: 40px;
                     line-height: 54px;
                     color: #F2F2F2;
                 }
-                .ellipse_title2 {
+                &__title2 {
                     position: absolute;
                     width: 446px;
                     height: 64px;
                     left: 122px;
                     top: 435px;
 
-                    font-family: PF Bague Sans Pro;
+                    font-family: @font-family-for-all;
                     font-size: 18px;
                     line-height: 25px;
 
@@ -134,13 +134,188 @@ body {
                 }
             }
         }
-        .content-2 {
-            width: 100%;
-            height: 467px;
+        .content-1 {
             z-index: 100;
             position: relative;
             display: block;
             background-color: #ffffff;
+            padding-bottom: 24px;
+            &__paragraph1 {
+                &__text1 {
+                    margin-left: 54px;
+                    padding-top: 57px;
+                    .text1 {
+                        font-family: @font-family-for-all;
+                        font-size: 44px;
+                        line-height: 58px;
+                        color: #1B1C1C;
+
+                    }
+                }
+                &__text2 {
+                    margin-left: 54px;
+                    .text2 {
+                        font-family: @font-family-for-all;
+                        font-size: 18px;
+                        line-height: 25px;
+                        color: #1B1C1C;
+                        width: 1254px;
+                    }
+                }
+            }
+            &__paragraph2 {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 20px;
+                &__card {
+                    display: flex;
+                    flex-direction: column;
+                    .logotype {
+                        width: 32.56px;
+                        height: 34.02px;
+                        margin-bottom: 15px;
+                    }
+                    .logoDescription {
+                        font-family: @font-family-for-all;
+                        font-size: 18px;
+                        line-height: 25px;
+                        color: #000000;
+                        width: 334px;
+                    }
+                }
+            }
+        }
+        .content-2 {
+            display: flex;
+            &__background {
+                width: 847.86px;
+                height: 757px;
+                background-image: url(../images/Гостиная2.png);
+                background-size: cover;
+                &__icons {
+                    &__figure {
+                        position: relative;
+                        &__ellipse1{
+                            position: absolute;
+                            width: 115.25px;
+                            height: 115px;
+                            left: 35.08px;
+                            top: 23px;
+                            background: rgba(42, 38, 38, 0.95);
+                            border-radius: 50%;
+                        }
+                        &__cupboard {
+                            position: absolute;
+                            left: 66px;
+                            right: 8px;
+                            top: 60px;
+                            bottom: -3px;
+                        }
+                        &__ellipse2 {
+                            position: absolute;
+                            width: 115.25px;
+                            height: 115px;
+                            left: 172.08px;
+                            top: 23px;
+                            background: rgba(42, 38, 38, 0.95);
+                            border-radius: 50%;
+                        }
+                        &__bed {
+                            position: absolute;
+                            left: 192px;
+                            right: 8px;
+                            top: 60px;
+                            bottom: -3px;
+                        }
+                        &__ellipse3 {
+                            position: absolute;
+                            width: 115.25px;
+                            height: 115px;
+                            left: 310.08px;
+                            top: 23px;
+                            background: rgba(42, 38, 38, 0.95);
+                            border-radius: 50%;
+                        }
+                        &__sofa {
+                            position: absolute;
+                            left: 332px;
+                            right: 8px;
+                            top: 60px;
+                            bottom: -3px;
+                        }
+                        &__ellipse4 {
+                            position: absolute;
+                            width: 115.25px;
+                            height: 115px;
+                            left: 448.08px;
+                            top: 23px;
+                            background: rgba(42, 38, 38, 0.95);
+                            border-radius: 50%;
+                        }
+                        &__bath {
+                            position: absolute;
+                            left: 467px;
+                            right: 8px;
+                            top: 66px;
+                            bottom: -3px;
+                        }
+                    }
+                }
+                &__signature {
+                    position: relative;
+                    .one {
+                        position: absolute;
+                        width: 607px;
+                        height: 60px;
+                        left: 46px;
+                        top: 623px;
+                        
+                        font-family: @font-family-for-all;
+                        font-size: 44px;
+                        line-height: 58px;
+                        
+                        color: #FFFFFF;  
+                    }
+                    .two {
+                        position: absolute;
+                        width: 385.69px;
+                        height: 25px;
+                        left: 46px;
+                        top: 679px;
+
+                        font-family: @font-family-for-all;
+                        font-size: 18px;
+                        line-height: 25px;
+
+                        color: #EAE5E5;
+                    }
+                } 
+            } 
+            &__list {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 521.14px;
+                height: 757px;
+                background: #404040;
+                &__lines {
+                    &__box {
+                        &__string {
+                            list-style: none;
+                            font-family: @font-family-for-all;
+                            font-size: 30px;
+                            line-height: 40px;
+                            font-weight: bold;
+                            color: rgb(255, 255, 255);
+                        }
+                        &__string:hover {
+                            color: #65C8CE;
+                            transition: 0.3s;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
         }
     }
 }
