@@ -310,12 +310,102 @@ body {
                         }
                         &__string:hover {
                             color: #65C8CE;
-                            transition: 0.3s;
+                            transition: all 0.3s;
                             cursor: pointer;
                         }
                     }
                 }
             }
+        }
+        .footer {
+            background: #151414;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 200px;
+            &__menu {
+                height: 100px;
+                &__items {
+                    &__list {
+                        list-style-type: none;
+                        &__link {
+                            font-family: @font-family-for-all;
+                            font-size: 10px;
+                            line-height: 14px;
+                            letter-spacing: 0.1em;
+                            text-transform: uppercase;
+                            color: #FFFFFF;
+                            text-decoration: none;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            &__option {
+                display: flex;
+                align-items: flex-start;
+                height: 100px;
+                &__items {
+                    &__list {
+                        list-style-type: none;
+                        &__link {
+                            font-family: @font-family-for-all;
+                            font-size: 10px;
+                            line-height: 14px;
+                            letter-spacing: 0.1em;
+                            text-transform: uppercase;
+                            color: #FFFFFF;
+                            text-decoration: none;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            &__icons {
+                height: 100px;
+                &__we {
+                    font-family: @font-family-for-all;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #999999;
+                }
+                &__package {
+                    &__facebook {
+                        position: relative;
+                        .fak {
+                            position: absolute;
+                            z-index: 1;
+                        }
+                        .fak1 {
+                            position: absolute;
+                            z-index: 2;
+                            left: 10px;
+                            top: 5px;
+                        }
+                    }
+                    &__instagram {
+                        position: relative;
+                        .ins {
+                            position: absolute;
+                            z-index: 1;
+                            left: 60px;
+                        }
+                        .ins1 {
+                            position: absolute;
+                            z-index: 2;
+                            left: 60px;
+                            top: 5px;
+                        }
+                    }
+                }
+            }
+            &__information {
+                height: 100px;
+                font-family: @font-family-for-all;
+                font-size: 14px;
+                line-height: 18px;
+                color: #999999;
+            } 
         }
     }
 }
