@@ -187,174 +187,143 @@ body {
                 height: 757px;
                 background-image: url(../images/Гостиная2.png);
                 background-size: cover;
-                &__icons {
-                    &__figure {
-                        position: relative;
-                        &__ellipse1{
-                            position: absolute;
-                            width: 115.25px;
-                            height: 115px;
-                            left: 35.08px;
-                            top: 48px;
-                            background: rgba(42, 38, 38, 0.95);
-                            border-radius: 50%;
-                        }
-                        &__cupboard {
-                            position: absolute;
-                            left: 66px;
-                            right: 8px;
-                            top: 85px;
-                            bottom: -3px;
-                        }
-                        &__ellipse2 {
-                            position: absolute;
-                            width: 115.25px;
-                            height: 115px;
-                            left: 172.08px;
-                            top: 48px;
-                            background: rgba(42, 38, 38, 0.95);
-                            border-radius: 50%;
-                        }
-                        &__bed {
-                            position: absolute;
-                            left: 192px;
-                            right: 8px;
-                            top: 85px;
-                            bottom: -3px;
-                        }
-                        &__ellipse3 {
-                            position: absolute;
-                            width: 115.25px;
-                            height: 115px;
-                            left: 310.08px;
-                            top: 48px;
-                            background: rgba(42, 38, 38, 0.95);
-                            border-radius: 50%;
-                        }
-                        &__sofa {
-                            position: absolute;
-                            left: 332px;
-                            right: 8px;
-                            top: 85px;
-                            bottom: -3px;
-                        }
-                        &__ellipse4 {
-                            position: absolute;
-                            width: 115.25px;
-                            height: 115px;
-                            left: 448.08px;
-                            top: 48px;
-                            background: rgba(42, 38, 38, 0.95);
-                            border-radius: 50%;
-                        }
-                        &__bath {
-                            position: absolute;
-                            left: 467px;
-                            right: 8px;
-                            top: 92px;
-                            bottom: -3px;
-                        }
-                    }
+            }
+            &__icons {
+            }
+            &__figure {
+                position: relative;
+                &__ellipsedark1 {
+                    .content-2-ellipse-position();
+                    left: 35.08px;
+                    top: 48px;
                 }
-                &__signature {
-                    position: relative;
-                    .one {
-                        position: absolute;
-                        width: 607px;
-                        height: 60px;
-                        left: 46px;
-                        top: 623px;
-                        
-                        font-family: @font-family-for-all;
-                        font-size: 44px;
-                        line-height: 58px;
-                        
-                        color: #FFFFFF;  
-                    }
-                    .two {
-                        position: absolute;
-                        width: 385.69px;
-                        height: 25px;
-                        left: 46px;
-                        top: 679px;
-
-                        font-family: @font-family-for-all;
-                        font-size: 18px;
-                        line-height: 25px;
-
-                        color: #EAE5E5;
-                    }
+                &__cupboard {
+                    .svg-items-to-ellipse();
+                    left: 66px;
+                    right: 8px;
+                }
+                &__ellipsedark2 {
+                    .content-2-ellipse-position();
+                    left: 172.08px;
+                    top: 48px;
+                }
+                &__bed {
+                    .svg-items-to-ellipse();
+                    left: 192px;
+                    right: 8px;
+                }
+                &__ellipsepurple {
+                    .content-2-ellipse-position();
+                    left: 310.08px;
+                    top: 48px;
+                }
+                &__sofa {
+                    .svg-items-to-ellipse();
+                    left: 332px;
+                    right: 8px;
+                }
+                &__ellipsedark3 {
+                    .content-2-ellipse-position();
+                    left: 448.08px;
+                    top: 48px;
+                }
+                &__bath {
+                    .svg-items-to-ellipse();
+                    left: 467px;
+                    right: 8px;
+                    top: 92px;
+                }
+            }
+            &__signature {
+                position: relative;
+                &-one {
+                    .descriprion-under-ellipse1();
+                    width: 607px;
+                    height: 60px;
+                    top: 623px;
+                    font-family: @font-family-for-all;
+                    font-size: 44px;
+                    line-height: 58px;  
+                }
+                &-two {
+                    .descriprion-under-ellipse2();
+                    width: 385.69px;
+                    height: 25px;
+                    top: 679px;
+                    font-family: @font-family-for-all;
+                    font-size: 18px;
+                    line-height: 25px;
                 } 
             } 
-            &__list {
+            &__arts {
+                width: 521.14px;
+                height: 757px;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                width: 521.14px;
-                height: 757px;
-                background: #404040;
-                &__lines {
-                    &__box {
-                        padding-right: 100px;
-                        &__string {
-                            list-style: none;
-                            font-family: @font-family-for-all;
-                            font-size: 30px;
-                            line-height: 40px;
-                            font-weight: bold;
-                            color: rgb(255, 255, 255);
-                        }
-                        &__string:hover {
-                            color: #65C8CE;
-                            transition: all 0.3s;
-                            cursor: pointer;
-                        }
-                    }
+                background: @color-link-menu;
+            }
+            &__kinds {
+            }
+            &__list {
+                padding-right: 100px;
+                &__string {
+                    font-family: @font-family-for-all;
+                    font-size: 30px;
+                    font-weight: bold;
+                    line-height: 40px;
+                    list-style: none;
+                    color: @color-white;
+                }
+                &__string:hover {
+                    color: @color-hover-arts;
+                    transition: all 0.3s;
+                    cursor: pointer;
                 }
             }
         }
         .footer {
-            background: #151414;
+            height: 200px;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            height: 200px;
+            background: @footer-background;
             &__menu {
                 height: 100px;
-                &__items {
-                    &__list {
-                        list-style-type: none;
-                        &__link {
-                            font-family: @font-family-for-all;
-                            font-size: 10px;
-                            line-height: 14px;
-                            letter-spacing: 0.1em;
-                            text-transform: uppercase;
-                            color: #FFFFFF;
-                            text-decoration: none;
-                            font-weight: bold;
-                        }
-                    }
+                &__list {
+                }
+                &__item {
+                    list-style-type: none;
+                }
+                &__link {
+                    font-family: @font-family-for-all;
+                    font-size: 10px;
+                    line-height: 14px;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    font-weight: bold;
                 }
             }
             &__option {
                 display: flex;
                 align-items: flex-start;
                 height: 100px;
-                &__items {
-                    &__list {
-                        list-style-type: none;
-                        &__link {
-                            font-family: @font-family-for-all;
-                            font-size: 10px;
-                            line-height: 14px;
-                            letter-spacing: 0.1em;
-                            text-transform: uppercase;
-                            color: #FFFFFF;
-                            text-decoration: none;
-                            font-weight: bold;
-                        }
-                    }
+                &__list {
+                }
+                &__item {
+                    list-style-type: none;
+                }
+                &__link {
+                    font-family: @font-family-for-all;
+                    font-size: 10px;
+                    line-height: 14px;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    font-weight: bold;
                 }
             }
             &__icons {
