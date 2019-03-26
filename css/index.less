@@ -289,7 +289,8 @@ body {
             align-items: center;
             background: @footer-background;
             &__menu {
-                height: 100px;
+                height: 200px;
+                .footer-block-position();
                 &__list {
                 }
                 &__item {
@@ -297,19 +298,24 @@ body {
                 }
                 &__link {
                     font-family: @font-family-for-all;
+                    font-weight: bold;
                     font-size: 10px;
                     line-height: 14px;
                     letter-spacing: 0.1em;
                     text-transform: uppercase;
-                    color: #FFFFFF;
                     text-decoration: none;
-                    font-weight: bold;
+                    color: @color-white;
+                }
+                &__description {
+                    color: @footer-heading-color-social;
+                    font-size: 8px;
+                    font-family: @font-family-for-all;
+                    line-height: 11px;
                 }
             }
             &__option {
-                display: flex;
-                align-items: flex-start;
-                height: 100px;
+                height: 228px;
+                .footer-block-position();
                 &__list {
                 }
                 &__item {
@@ -317,59 +323,82 @@ body {
                 }
                 &__link {
                     font-family: @font-family-for-all;
+                    font-weight: bold;
                     font-size: 10px;
                     line-height: 14px;
                     letter-spacing: 0.1em;
                     text-transform: uppercase;
-                    color: #FFFFFF;
                     text-decoration: none;
-                    font-weight: bold;
+                    color: @color-white;
+                }
+                &__description {
+                    color: @footer-heading-color-social;
+                    font-size: 8px;
+                    font-family: @font-family-for-all;
+                    line-height: 11px;
                 }
             }
             &__icons {
-                height: 100px;
-                &__we {
+                height: 138px;
+                &__heading {
                     font-family: @font-family-for-all;
                     font-size: 14px;
                     line-height: 18px;
-                    color: #999999;
+                    color: @footer-heading-color-social;
                 }
                 &__package {
-                    &__facebook {
-                        position: relative;
-                        .fak {
-                            position: absolute;
-                            z-index: 1;
-                        }
-                        .fak1 {
-                            position: absolute;
-                            z-index: 2;
-                            left: 10px;
-                            top: 5px;
-                        }
-                    }
-                    &__instagram {
-                        position: relative;
-                        .ins {
-                            position: absolute;
-                            z-index: 1;
-                            left: 60px;
-                        }
-                        .ins1 {
-                            position: absolute;
-                            z-index: 2;
-                            left: 60px;
-                            top: 5px;
-                        }
-                    }
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 17px;
+                }
+                &__social {
+                }
+                &__link {
+                    .socialweb();
+                }
+                .fab {
+                    color: @footer-color-icons;
                 }
             }
             &__information {
-                height: 100px;
-                font-family: @font-family-for-all;
-                font-size: 14px;
-                line-height: 18px;
-                color: #999999;
+                height: 200px;
+                .footer-block-position();
+                &__box {
+                }
+                &__new {
+                    font-family: @font-family-for-all;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: @footer-heading-color-social;
+                }
+                &__connection {
+                }
+                &__active {
+                    border: none;
+                    border-bottom: 1px solid @color-white;
+                    font-family: @font-family-for-all;
+                    background: @footer-background;
+                    padding-bottom: 5px;
+                    color: @color-white;
+                    outline: none;
+
+                }
+                &__push {
+                    width: 35.97px;
+                    height: 36px;
+                    border-radius: 50%;
+                    background: @ellipse-color;
+                    border: none;
+                    margin-left: 16px;
+                    cursor: pointer;
+                }
+                &__copyright {
+                    color: @footer-heading-color-social;
+                    font-size: 8px;
+                    font-family: @font-family-for-all;
+                    line-height: 11px;
+                    align-self: flex-end;
+                }
             } 
         }
     }
