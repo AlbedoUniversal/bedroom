@@ -30,12 +30,12 @@
                 </div>
             </div>
             <div class="information">
-                <div class="information-background">
-                    <img src="images/Гостиная1.png" alt="">
+                <div class="information__background">
+                    <img class="information__picture" src="images/Гостиная1.png" alt="">
                 </div>
                 <div class="information-ellipse">
                     <span class="information-ellipse__title">
-                        <strong>Дизайн-проект</strong> <br>
+                        <strong>Дизайн-проект</strong><br>
                         БЕСПЛАТНО 
                     </span>
                     <span class="information-ellipse__title2">
@@ -94,29 +94,35 @@
                 <div class="services__background">
                     <div class="services__icons">
                         <div class="services__figure">
-                            <img class="services__figure__ellipsedark1" src="images/Ellipse1.svg" alt="">
-                            <img class="services__figure__cupboard" src="images/kitchen.svg" alt="">
+                            <span class="services__figure__ellipse">
+                                <img class="services__figure__furniture" src="images/kitchen.svg" alt="">
+                            </span>
                         </div>
                         <div class="services__figure">
-                            <img class="services__figure__ellipsedark2" src="images/Ellipse2.svg" alt="">
-                            <img class="services__figure__bed" src="images/bed.svg" alt="">
+                            <span class="services__figure__ellipse">
+                                <img class="services__figure__furniture" src="images/bed.svg" alt="">
+                            </span>
                         </div>
                         <div class="services__figure">
-                            <img class="services__figure__ellipsepurple" src="images/Ellipse3.svg" alt="">
-                            <img class="services__figure__sofa" src="images/sofa.svg" alt="">
+                            <span class="services__figure__ellipse">
+                                <img class="services__figure__furniture" src="images/sofa.svg" alt="">
+                            </span>
                         </div>
                         <div class="services__figure">
-                            <img class="services__figure__ellipsedark3" src="images/Ellipse4.svg" alt="">
-                            <img class="services__figure__bath" src="images/bath.svg" alt="">
+                            <span class="services__figure__ellipse">
+                                <img class="services__figure__furniture" src="images/bath.svg" alt="">
+                            </span>
                         </div>
                     </div>
                     <div class="services__signature">
-                        <span class="services__signature-one">
-                            Гостинные <strong>Plumberry</strong> <br>
-                        </span>
-                        <span class="services__signature-two">
-                            Проекты, выполненные нами с любовью <br>
-                        </span>
+                        <div class="services__box">
+                            <span class="services__description1">
+                                Гостинные <strong>Plumberry</strong> <br>
+                            </span>
+                            <span class="services__description2">
+                                Проекты, выполненные нами с любовью <br>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="services__arts">
@@ -134,55 +140,61 @@
                 </div>
             </div>
             <div class="footer">
-                <div class="footer__menu">
-                    <ul class="footer__menu__list">
-                        <li class="footer__menu__item"><a class="footer__menu__link" href="">кухни</a></li>
-                        <li class="footer__menu__item"><a class="footer__menu__link" href="">спальни</a></li>
-                        <li class="footer__menu__item"><a class="footer__menu__link" href="">гостиные</a></li>
-                        <li class="footer__menu__item"><a class="footer__menu__link" href="">ванные комнаты</a></li>
-                    </ul>
-                    <span class="footer__menu__description">
-                        Политика конфиденциальности
-                    </span>
-                </div>
-                <div class="footer__option">
-                    <ul class="footer__option__list">
-                        <li class="footer__option__item"><a class="footer__option__link" href="">партнерская программа</a></li>
-                        <li class="footer__option__item"><a class="footer__option__link" href="">блог</a></li>
-                    </ul>
-                    <span class="footer__option__description">
-                            Согласие на обработку персональных данных
-                    </span>
-                </div>
-                <div class="footer__icons">
-                    <span class="footer__icons__heading">
-                        Мы в социальных медиа
-                    </span>
-                    <div class="footer__icons__package">
-                        <div class="footer__icons__social">
-                            <a class="footer__icons__link" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>    
-                        </div>
-                        <div class="footer__icons__social">
-                            <a class="footer__icons__link" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="footer__icons__social">
-                            <a class="footer__icons__link" href="#" target="_blank"><i class="fab fa-vk"></i></a>    
-                        </div>
+                <div class="footer__functional">
+                    <div class="footer__menu">
+                        <ul class="footer__menu__list">
+                            <li class="footer__menu__item"><a class="footer__menu__link" href="">кухни</a></li>
+                            <li class="footer__menu__item"><a class="footer__menu__link" href="">спальни</a></li>
+                            <li class="footer__menu__item"><a class="footer__menu__link" href="">гостиные</a></li>
+                            <li class="footer__menu__item"><a class="footer__menu__link" href="">ванные комнаты</a></li>
+                        </ul>
                     </div>
-                </div>
-                <div class="footer__information">
-                    <div class="footer__information__box">
-                        <span class="footer__information__new">
-                            Подписаться на новости
+                    <div class="footer__option">
+                        <ul class="footer__option__list">
+                            <li class="footer__option__item"><a class="footer__option__link" href="">партнерская программа</a></li>
+                            <li class="footer__option__item"><a class="footer__option__link" href="">блог</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__icons">
+                        <span class="footer__icons__heading">
+                            Мы в социальных медиа
                         </span>
-                        <form class="footer__information__connection">
-                            <input class="footer__information__active" type="text" name="name" value="" placeholder="EMAIL">
-                            <button class="footer__information__push" type="submit">
-                                <img src="images/arrow.svg" alt="">
-                            </button>
-                        </form>
+                        <div class="footer__icons__package">
+                            <div class="footer__icons__social">
+                                <a class="footer__icons__link" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>    
+                            </div>
+                            <div class="footer__icons__social">
+                                <a class="footer__icons__link" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <div class="footer__icons__social">
+                                <a class="footer__icons__link" href="#" target="_blank"><i class="fab fa-vk"></i></a>    
+                            </div>
+                        </div>
                     </div>
-                    <span class="footer__information__copyright">
+                    <div class="footer__information">
+                        <div class="footer__information__box">
+                            <span class="footer__information__new">
+                                Подписаться на новости
+                            </span>
+                            <form class="footer__information__connection">
+                                <input class="footer__information__active" type="text" name="name" value="" placeholder="EMAIL">
+                                <button class="footer__information__push" type="submit">
+                                    <img src="images/arrow.svg" alt="">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__FAQ">
+                    <div class="footer__FAQ__box">
+                        <span class="footer__FAQ__description">
+                            Политика конфиденциальности
+                        </span>
+                        <span class="footer__FAQ__personal">
+                            Согласие на обработку персональных данных
+                        </span>
+                    </div>
+                    <span class="footer__FAQ__copyright">
                         &#169 ALL RIGHTS RESERVED
                     </span>
                 </div>
