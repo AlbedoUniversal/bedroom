@@ -1,4 +1,19 @@
-// ------->>>All COLORS<<<-------
+// ------->>>FONTS<<<-------
+@font-face {
+    font-family: 'font9002832c31fecc8695ccdc56328fb0fb';
+        
+    src: url('https://nomail.com.ua/files/eot/9002832c31fecc8695ccdc56328fb0fb.eot?#iefix') format('embedded-opentype'),
+         url('https://nomail.com.ua/files/woff/9002832c31fecc8695ccdc56328fb0fb.woff') format('woff'),
+         url('https://nomail.com.ua/files/woff2/9002832c31fecc8695ccdc56328fb0fb.woff2') format('woff2');
+}
+    
+@font-face { font-family: 'PFBagueSansPro-Thin';  src: local('PFBagueSansPro-Thin'), url('https://nomail.com.ua/files/woff/9002832c31fecc8695ccdc56328fb0fb.woff') format('woff'); }
+
+@font-family-for-all: 'font9002832c31fecc8695ccdc56328fb0fb';
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ------->>>All  VARS<<<-------
 
 @color-white: #FFFFFF;  // постоянный цвет боди
 @color-header: #E5E5E5; // постоянный цвет хидера
@@ -12,4 +27,72 @@
 @footer-background: #151414; // цвет футера
 @footer-heading-color-social: #999999;  // цвет заголовка на иконках в хидере
 @footer-color-icons: #0F0F0F; // цвет иконок в футере
+
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ------->>>MIXINS<<<-------
+
+.content-2-ellipse-position() {                // позиционирование эллипсов на 2 слайдере 
+    width: 115.25px;
+    height: 115px;
+    position: absolute;
+    background: rgba(42, 38, 38, 0.95);
+    border-radius: 50%;
+} 
+
+.svg-items-to-ellipse() {             // позиционирование svg иконок внутри эллипса на 2 слайдере 
+    position: absolute;
+    bottom: -3px;
+    top: 85px;
+}
+
+.descriprion-under-ellipse1() {         // подпись - 1 под эллипсами на 2 слайдере
+    position: absolute;
+    left: 46px;
+    color: @color-white;
+}
+
+.descriprion-under-ellipse2() {         // подпись - 2 под эллипсами на 2 слайдере 
+    position: absolute;
+    left: 46px;
+    color: #EAE5E5;
+}
+
+.socialweb() {                      // социальные сети
+    text-align: center;
+    width: 30.44px;
+    height: 30.44px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-block-position() {              // позиция на колонки в футере 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.link-hover() {                                // ховеры на все кнопочки 
+    color: @color-hover-arts;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.social-hover() {                        // ховер соц сетей 
+    transition: all 0.3s;
+    cursor: pointer;
+    color: white;
+    background-color: @color-hover-arts;
+}
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------
                 

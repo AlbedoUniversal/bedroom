@@ -1,8 +1,5 @@
-@import "../fonts/font";
+
 @import "../css/config";
-@import "../mixin/mixin"; 
-
-
 
 * {
     padding: 0;
@@ -12,6 +9,7 @@
 body {
     width: 100%;
     background-color: @color-white;
+
     #main {
         max-width: 1366px;
         margin: auto;
@@ -19,6 +17,7 @@ body {
         overflow: hidden;
         position: relative;
         z-index: 4;
+
         .header {
             height: 70px;
             background: @color-header;
@@ -27,10 +26,12 @@ body {
             align-items: center;
             position: relative;
             z-index: 3;
+
             &-logo {
                 width: 389px;
                 display: flex;
                 margin-left: 46px;
+
                 &__name {
                     padding-left: 3.16px;    
                     font-family: @font-family-for-all;
@@ -38,16 +39,20 @@ body {
                     line-height: normal;
                 }
             }
+
             &-menu {
                 width: 588px;
+
                 &__list {
                     width: 100%;
                     display: flex;
                     justify-content: space-around;
                 }
+
                 &__item {
                     list-style-type: none;
                 }
+
                 &__link {
                     font-family: @font-family-for-all;
                     font-size: 13px;
@@ -58,10 +63,16 @@ body {
                     letter-spacing: 0.1em;
                     color: @color-link-menu;
                 }
+                &__link:hover {
+                    .link-hover();
+                }
             }
+
             &-button {
                 width: 389px;
+
                 &__connection {
+
                     .send {
                         width: 226px;
                         height: 40px;
@@ -78,24 +89,29 @@ body {
                         border: none;
                         float: right;
                         margin-right: 20px;
+                        cursor: pointer;
                     }
                 }
             }    
         }
-        .content {
+
+        .information {
             position: relative;
+            
             &-background {
                 width: 100%;
                 height: auto;
                 display: flex;
                 position: relative;
-                z-index: 1;    
+                z-index: 1; 
+
                 img {
                     width: 902px;
                     height: 691px; 
                     z-index: 10; 
                 } 
             }
+
             &-ellipse {
                 width: 1001px;
                 height: 1036px;
@@ -105,6 +121,7 @@ body {
                 background: @ellipse-color;
                 border-radius: 50%;
                 z-index: 2;
+
                 &__title {
                     width: 450px;
                     height: 88px;
@@ -116,6 +133,7 @@ body {
                     line-height: 54px;
                     color: @ellipse-color-tittle;
                 }
+
                 &__title2 {
                     width: 446px;
                     height: 64px;
@@ -129,17 +147,21 @@ body {
                 }
             }
         }
-        .content-1 {
+
+        .about {
             display: block;
             position: relative;
             background-color: @content-1-background;
             padding-bottom: 24px;
             z-index: 100;
+
             &__paragraph1 {
             }
+
             &__text1 {
                 margin-left: 54px;
                 padding-top: 57px;
+
                 .title3 {
                     font-family: @font-family-for-all;
                     font-size: 44px;
@@ -147,8 +169,10 @@ body {
                     color: @content-1-text-color;
                 }
             }
+
             &__text2 {
                 margin-left: 54px;
+
                 .title4 {
                     font-family: @font-family-for-all;
                     font-size: 18px;
@@ -157,21 +181,25 @@ body {
                     width: 1254px;
                 }
             }
+
             &__paragraph2 {
                 display: flex;
                 justify-content: space-around;
                 margin-top: 20px;
                 margin-bottom: 30px;
             }
+
             &__card {
                 display: flex;
                 flex-direction: column;
             }
+
             &__logotype {
                 width: 32.56px;
                 height: 34.02px;
                 margin-bottom: 15px;
             }
+
             &__description {
                 width: 334px;
                 font-family: @font-family-for-all;
@@ -180,53 +208,65 @@ body {
                 color: @color-description-text;
             }
         }
-        .content-2 {
+
+        .services {
             display: flex;
+
             &__background {
                 width: 847.86px;
                 height: 757px;
                 background-image: url(../images/Гостиная2.png);
                 background-size: cover;
             }
+
             &__icons {
             }
+
             &__figure {
                 position: relative;
+
                 &__ellipsedark1 {
                     .content-2-ellipse-position();
                     left: 35.08px;
                     top: 48px;
                 }
+
                 &__cupboard {
                     .svg-items-to-ellipse();
                     left: 66px;
                     right: 8px;
                 }
+
                 &__ellipsedark2 {
                     .content-2-ellipse-position();
                     left: 172.08px;
                     top: 48px;
                 }
+
                 &__bed {
                     .svg-items-to-ellipse();
                     left: 192px;
                     right: 8px;
                 }
+
                 &__ellipsepurple {
                     .content-2-ellipse-position();
                     left: 310.08px;
                     top: 48px;
                 }
+
                 &__sofa {
                     .svg-items-to-ellipse();
                     left: 332px;
                     right: 8px;
                 }
+
                 &__ellipsedark3 {
                     .content-2-ellipse-position();
                     left: 448.08px;
                     top: 48px;
                 }
+
                 &__bath {
                     .svg-items-to-ellipse();
                     left: 467px;
@@ -234,8 +274,10 @@ body {
                     top: 92px;
                 }
             }
+
             &__signature {
                 position: relative;
+
                 &-one {
                     .descriprion-under-ellipse1();
                     width: 607px;
@@ -245,6 +287,7 @@ body {
                     font-size: 44px;
                     line-height: 58px;  
                 }
+
                 &-two {
                     .descriprion-under-ellipse2();
                     width: 385.69px;
@@ -255,6 +298,7 @@ body {
                     line-height: 25px;
                 } 
             } 
+
             &__arts {
                 width: 521.14px;
                 height: 757px;
@@ -263,10 +307,13 @@ body {
                 align-items: center;
                 background: @color-link-menu;
             }
+
             &__kinds {
             }
+
             &__list {
                 padding-right: 100px;
+
                 &__string {
                     font-family: @font-family-for-all;
                     font-size: 30px;
@@ -275,27 +322,31 @@ body {
                     list-style: none;
                     color: @color-white;
                 }
+
                 &__string:hover {
-                    color: @color-hover-arts;
-                    transition: all 0.3s;
-                    cursor: pointer;
+                    .link-hover();
                 }
             }
         }
+
         .footer {
             height: 200px;
             display: flex;
             justify-content: space-around;
             align-items: center;
             background: @footer-background;
+
             &__menu {
                 height: 200px;
                 .footer-block-position();
+
                 &__list {
                 }
+
                 &__item {
                     list-style-type: none;
                 }
+
                 &__link {
                     font-family: @font-family-for-all;
                     font-weight: bold;
@@ -306,6 +357,10 @@ body {
                     text-decoration: none;
                     color: @color-white;
                 }
+                &__link:hover {
+                    .link-hover();
+                }
+
                 &__description {
                     color: @footer-heading-color-social;
                     font-size: 8px;
@@ -313,14 +368,17 @@ body {
                     line-height: 11px;
                 }
             }
+
             &__option {
                 height: 228px;
                 .footer-block-position();
                 &__list {
                 }
+
                 &__item {
                     list-style-type: none;
                 }
+
                 &__link {
                     font-family: @font-family-for-all;
                     font-weight: bold;
@@ -331,6 +389,10 @@ body {
                     text-decoration: none;
                     color: @color-white;
                 }
+                &__link:hover {
+                    .link-hover();
+                }
+
                 &__description {
                     color: @footer-heading-color-social;
                     font-size: 8px;
@@ -338,41 +400,60 @@ body {
                     line-height: 11px;
                 }
             }
+
             &__icons {
                 height: 138px;
+
                 &__heading {
                     font-family: @font-family-for-all;
                     font-size: 14px;
                     line-height: 18px;
                     color: @footer-heading-color-social;
                 }
+
                 &__package {
                     display: flex;
                     justify-content: space-between;
                     padding-top: 17px;
                 }
+
                 &__social {
                 }
+
                 &__link {
                     .socialweb();
                 }
+                &__link:hover {
+                    background-color: @color-hover-arts;
+                    transition: all 0.3s;
+                    cursor: pointer;
+                }
+
                 .fab {
                     color: @footer-color-icons;
                 }
+                &__social:hover .fab {
+                    color: @color-white;
+                }
             }
+
             &__information {
                 height: 200px;
                 .footer-block-position();
+
                 &__box {
                 }
+
                 &__new {
                     font-family: @font-family-for-all;
                     font-size: 14px;
                     line-height: 18px;
                     color: @footer-heading-color-social;
                 }
+
                 &__connection {
                 }
+
                 &__active {
                     border: none;
                     border-bottom: 1px solid @color-white;
@@ -381,8 +462,8 @@ body {
                     padding-bottom: 5px;
                     color: @color-white;
                     outline: none;
-
                 }
+
                 &__push {
                     width: 35.97px;
                     height: 36px;
@@ -392,6 +473,7 @@ body {
                     margin-left: 16px;
                     cursor: pointer;
                 }
+
                 &__copyright {
                     color: @footer-heading-color-social;
                     font-size: 8px;
