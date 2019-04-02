@@ -17,6 +17,7 @@
 
 @color-white: #FFFFFF;  // постоянный цвет боди
 @color-header: #E5E5E5; // постоянный цвет хидера
+@mobile-menu-bkcolor: #070707d5; // цвет бэкграунда выезжающего меню
 @color-link-menu: #404040; // постоянный цвет ссылок в меню хидера
 @ellipse-color: #B18999; // постоянный цвет эллипса
 @ellipse-color-tittle: #F2F2F2; // постоянный цвет надписи на эллипсе большом
@@ -31,6 +32,32 @@
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // ------->>>MIXINS<<<-------
+ 
+
+.link-menu-style-desktop() {
+    font-family: @font-family-for-all;                 // ссылки в менюшке на десктопе
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    color: @color-link-menu;
+}
+
+
+
+.link-menu-style-mobile() {
+    font-family: @font-family-for-all;                 // ссылки в менюшке на мобилке 
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    color: @content-1-background;
+}
+
 
 .content-2-ellipse-position() {                // позиционирование эллипсов на 2 слайдере 
     width: 115.25px;

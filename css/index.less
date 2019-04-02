@@ -1,5 +1,6 @@
 
 @import "../css/config";
+@transition-duration: 0.5s;
 
 * {
     padding: 0;
@@ -26,9 +27,11 @@ body {
             align-items: center;
             position: relative;
             z-index: 3;
+            
+            position: relative;
 
             &-logo {
-                width: 389px;
+                // width: 389px;
                 display: flex;
                 margin-left: 46px;
 
@@ -38,6 +41,108 @@ body {
                     font-size: 12px;
                     line-height: normal;
                 }
+            }
+
+            .hidden-menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: fixed;
+                top: 70px;
+                right: -800px;
+                margin: 0;
+                width: 100%;
+                height: 691px;
+                transition: right .8s;
+                z-index: 2;
+                list-style:none;
+                box-sizing: border-box;
+                background-color: @mobile-menu-bkcolor;
+                -webkit-transform: translateZ(0);
+                -webkit-backface-visibility: hidden;
+
+                @media screen and (min-width:768px) {
+                    display: none;
+                }
+
+                &__link {
+                    margin-bottom: 20px;
+                }
+
+                &__string {
+                    .link-menu-style-mobile();
+                }
+                &__string:hover {
+                    .link-hover();
+                }
+            }
+
+            .hidden-menu-ticker {
+                display: none;
+            }
+
+            .btn-menu {
+                padding: 5px;
+                margin-right: 20px;
+                top: 5px;
+                right: 5px;
+                cursor: pointer;
+                transition: right .23s;
+                z-index: 3;
+                width: 25px;
+                -webkit-transform: translateZ(0);
+                -webkit-backface-visibility: hidden;
+
+                @media screen and (min-width:768px) {
+                    display: none;
+                }
+            }
+
+            .btn-menu span {
+                display: block;
+                height: 5px;
+                background-color: @content-1-text-color;
+                margin: 5px 0 0;
+                transition: all .1s linear .23s;
+                position: relative;
+                float: right;
+            }
+
+            .btn-menu span.first {
+                margin-top: 0;
+                width: 30px;
+            }
+
+            .btn-menu span.second {
+                width: 25px;
+            }
+
+            .btn-menu span.third {
+                width: 20px;
+            }
+
+            .hidden-menu-ticker:checked ~ .btn-menu {
+                right: 160px;
+            }
+
+            .hidden-menu-ticker:checked ~ .hidden-menu {
+                right: 0;
+            }
+
+            .hidden-menu-ticker:checked ~ .btn-menu span.first {
+                -webkit-transform: rotate(45deg);
+                top: 10px;
+            }
+
+            .hidden-menu-ticker:checked ~ .btn-menu span.second {
+                opacity: 0;
+            }
+
+            .hidden-menu-ticker:checked ~ .btn-menu span.third {
+                -webkit-transform: rotate(-45deg);
+                width: 30px;
+                top: -10px;
             }
 
             &-menu {
@@ -51,20 +156,18 @@ body {
 
                 &__item {
                     list-style-type: none;
+                    // width: 133px;
                 }
 
                 &__link {
-                    font-family: @font-family-for-all;
-                    font-size: 13px;
-                    font-weight: bold;
-                    text-transform: uppercase;
-                    text-decoration: none;
-                    line-height: 18px;
-                    letter-spacing: 0.1em;
-                    color: @color-link-menu;
+                    .link-menu-style-desktop();
                 }
                 &__link:hover {
                     .link-hover();
+                }
+
+                @media screen and (max-width:768px) {
+                    display: none;
                 }
             }
 
@@ -91,6 +194,10 @@ body {
                         margin-right: 20px;
                         cursor: pointer;
                     }
+                }
+
+                @media screen and (max-width:768px) {
+                    display: none;
                 }
             }    
         }
@@ -141,7 +248,7 @@ body {
                     width: 446px;
                     height: 64px;
                     font-family: @font-family-for-all;
-                    font-size: 18px;
+                    font-size: 16px;
                     line-height: 25px;
                     color: @ellipse-color-tittle;
                 }
@@ -156,11 +263,10 @@ body {
             z-index: 100;
 
             &__paragraph1 {
+                padding: 57px 54px 0;
             }
 
             &__text1 {
-                margin-left: 54px;
-                padding-top: 57px;
 
                 .title3 {
                     font-family: @font-family-for-all;
@@ -171,7 +277,6 @@ body {
             }
 
             &__text2 {
-                margin-left: 54px;
 
                 .title4 {
                     font-family: @font-family-for-all;
@@ -183,10 +288,11 @@ body {
 
             &__paragraph2 {
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 flex-wrap: wrap;
                 margin-top: 20px;
                 margin-bottom: 30px;
+                padding: 0 58px;
             }
 
             &__card {
@@ -201,7 +307,7 @@ body {
             }
 
             &__description {
-                width: 334px;
+                // width: 334px;
                 font-family: @font-family-for-all;
                 font-size: 16px;
                 line-height: 25px;
@@ -224,14 +330,26 @@ body {
 
             &__icons {
                 width: 600px;
-                height: 150px;
+                // height: 150px;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
+                padding-top: 20px;
+
+                @media screen and (max-width:768px) {
+                    width: 440px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding-left: 20px;
+                }
             }
 
             &__figure {
                 display: flex;
+
+                @media screen and (max-width:768px) {
+                    margin-bottom: 10px;
+                }
 
                 &__ellipse {
                     .content-2-ellipse-position();
@@ -291,6 +409,12 @@ body {
             &__list {
                 padding-right: 100px;
 
+                @media screen and (max-width:768px) {
+                    padding: 0;
+                }
+
+                
+
                 &__string {
                     font-family: @font-family-for-all;
                     font-size: 30px;
@@ -310,12 +434,36 @@ body {
             height: 200px;
             background: @footer-background;
 
+            @media screen and (max-width:768px) {
+                height: auto;
+            }
+
+            @media screen and (max-width:468px) {
+                height: auto;
+            }
+
             &__functional {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 height: 120px;
                 padding-top: 30px;
+
+                @media screen and (max-width:768px) {
+                    flex-direction: column;
+                    height: 280px;
+                    justify-content: center;
+                    text-align: -webkit-center;
+                    padding: 0;
+                }
+
+                @media screen and (max-width:468px) {
+                    flex-direction: column;
+                    height: 280px;
+                    justify-content: center;
+                    text-align: -webkit-center;
+                    padding: 0;
+                }
             }
 
             &__menu {
@@ -347,6 +495,15 @@ body {
             &__option {
                 align-self: baseline;
                 .footer-block-position();
+
+                @media screen and (max-width:768px) {
+                    padding-bottom: 20px;
+                }
+
+                @media screen and (max-width:468px) {
+                    padding-bottom: 20px;
+                }
+
                 &__list {
                 }
 
@@ -383,6 +540,14 @@ body {
                     display: flex;
                     justify-content: space-between;
                     padding-top: 17px;
+
+                    @media screen and (max-width:768px) {
+                        padding-bottom: 20px;
+                    }
+
+                    @media screen and (max-width:468px) {
+                        padding-bottom: 20px;
+                    }
                 }
 
                 &__social {
@@ -445,10 +610,35 @@ body {
             &__FAQ {
                 display: flex;
                 justify-content: space-between;
+
+                @media screen and (max-width:768px) {
+                    display: flex;
+                    justify-content: center;
+                    height: 60px;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                @media screen and (max-width:468px) {
+                    display: flex;
+                    justify-content: center;
+                    height: 60px;
+                }
+
                 &__box {
                     width: 46%;
                     display: flex;
                     justify-content: space-around;
+
+                    @media screen and (max-width:768px) {
+                        flex-direction: column;
+                        text-align: center;
+                    }
+
+                    @media screen and (max-width:468px) {
+                        flex-direction: column;
+                        text-align: center;
+                    }
                 }
                 &__description {
                     .footer-descriprion();
@@ -460,6 +650,16 @@ body {
                     .footer-descriprion();
                     align-self: flex-end;
                     width: 10%;
+
+                    @media screen and (max-width:768px) {
+                        width: auto;
+                        align-self: center;
+                    }
+
+
+                    @media screen and (max-width:468px) {
+                        display: none;
+                    }
                 }
             } 
         }
