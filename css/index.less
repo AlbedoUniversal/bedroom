@@ -1,6 +1,5 @@
 
 @import "../css/config";
-@transition-duration: 0.5s;
 
 * {
     padding: 0;
@@ -26,7 +25,7 @@ body {
             justify-content: space-between;
             align-items: center;
             position: relative;
-            z-index: 3;
+            z-index: 30000000;
             
             position: relative;
 
@@ -123,7 +122,8 @@ body {
             }
 
             .hidden-menu-ticker:checked ~ .btn-menu {
-                right: 160px;
+                // right: 160px;
+                position: fixed;
             }
 
             .hidden-menu-ticker:checked ~ .hidden-menu {
@@ -211,13 +211,20 @@ body {
                 display: flex;
                 position: relative;
                 z-index: 1; 
-
-                &__picture {
-                    width: 902px;
-                    height: 691px; 
-                    z-index: 10; 
-                } 
             }
+            &__picture {
+                width: 902px;
+                height: 691px; 
+                z-index: 10;
+
+                @media screen and (max-width:768px) {
+                    width: 100%;
+                }
+                
+                @media screen and (max-width:425px) {
+                    width: 100%;
+                }
+            } 
 
             &-ellipse {
                 width: 1001px;
@@ -233,6 +240,23 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 padding-left: 75px;
+
+                @media screen and (max-width:768px) {
+                    width: 876px;
+                    height: 470px;
+                    left: -9%;
+                    top: 54%;
+                }
+
+                @media screen and (max-width:425px) {
+                    width: 587px;
+                    height: 402px;
+                    left: -35%;
+                    top: 64%;
+                    justify-content: flex-start;
+                    padding-left: 160px;
+                    padding-top: 45px;
+                }
 
                 &__title {
                     width: 450px;
@@ -318,6 +342,10 @@ body {
         .services {
             display: flex;
 
+            @media screen and (max-width:768px) {
+                flex-direction: column;
+            }
+
             &__background {
                 width: 847.86px;
                 height: 757px;
@@ -326,6 +354,11 @@ body {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+
+                @media screen and (max-width:425px) {
+                    height: 384px;
+                    width: 100%;
+                }
             }
 
             &__icons {
@@ -341,6 +374,10 @@ body {
                     flex-direction: column;
                     align-items: flex-start;
                     padding-left: 20px;
+                }
+
+                @media screen and (max-width:425px) {
+                    display: none;
                 }
             }
 
@@ -374,20 +411,23 @@ body {
 
             &__box {
 
+                @media screen and (max-width:425px) {
+                    display: none;
+                }
             }
 
             &__description1 {
-                width: 607px;
-                height: 60px;
+                // width: 607px;
+                // height: 60px;
                 font-family: @font-family-for-all;
-                font-size: 44px;
+                font-size: 41px;
                 line-height: 58px; 
                 color: @color-white; 
             }
 
             &__description2 {
-                width: 385.69px;
-                height: 25px;
+                // width: 385.69px;
+                // height: 25px;
                 font-family: @font-family-for-all;
                 font-size: 18px;
                 line-height: 25px;
@@ -401,6 +441,13 @@ body {
                 justify-content: space-around;
                 align-items: center;
                 background: @color-link-menu;
+
+                @media screen and (max-width:768px) {
+                    width: 100%;
+                    height: auto;
+                    justify-content: flex-start;
+                    padding: 15px;
+                }
             }
 
             &__kinds {
@@ -422,10 +469,35 @@ body {
                     line-height: 40px;
                     list-style: none;
                     color: @color-white;
+
+                    @media screen and (max-width:425px) {
+                        display: none;
+                    }
                 }
 
                 &__string:hover {
                     .link-hover();
+                }
+            }
+
+            &__mobilebox {
+                display: none;
+
+                @media screen and (max-width:425px) {
+                    display: block;
+                }
+            }
+
+            &__description1 {
+
+                @media screen and (max-width:425px) {
+                    font-size: 30px;
+                }
+            }
+            &__description2 {
+
+                @media screen and (max-width:425px) {
+                    font-size: 17px;
                 }
             }
         }
@@ -436,10 +508,12 @@ body {
 
             @media screen and (max-width:768px) {
                 height: auto;
+                padding-top: 50px;
             }
 
             @media screen and (max-width:468px) {
                 height: auto;
+                padding-top: 50px;
             }
 
             &__functional {
@@ -470,11 +544,19 @@ body {
                 align-self: baseline;
                 .footer-block-position();
 
+                @media screen and (max-width: 425px) {
+                    margin-bottom: 20px;
+                }
+
                 &__list {
                 }
 
                 &__item {
                     list-style-type: none;
+
+                    @media screen and (max-width: 425px) {
+                        padding-bottom: 10px;
+                    }
                 }
 
                 &__link {
@@ -486,6 +568,10 @@ body {
                     text-transform: uppercase;
                     text-decoration: none;
                     color: @color-white;
+
+                    @media screen and (max-width:768px) {
+                        font-size: 15px;
+                    }
                 }
                 &__link:hover {
                     .link-hover();
@@ -509,6 +595,10 @@ body {
 
                 &__item {
                     list-style-type: none;
+
+                    @media screen and (max-width: 425px) {
+                        padding-bottom: 10px;
+                    }
                 }
 
                 &__link {
@@ -520,6 +610,10 @@ body {
                     text-transform: uppercase;
                     text-decoration: none;
                     color: @color-white;
+
+                    @media screen and (max-width:768px) {
+                        font-size: 15px;
+                    }
                 }
                 &__link:hover {
                     .link-hover();
